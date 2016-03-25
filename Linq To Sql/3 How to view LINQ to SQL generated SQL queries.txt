@@ -1,0 +1,6 @@
+Hata ayılama işlemleri için oluşturulmuş SQL sorgularını görüntülemek 
+gereklidir. Bunu yapmanın en kolay yolları bir asp.net sayfasına veya console penceresine yazmaktır.
+
+Bunu yapmak için otomatik oluşturulan SQL CLASS'ının ögneğinde bulunan LOG PROPERTY'sine Response.OutPut veriyoruz. 
+
+Aynı işi LINQ sorgusu oluşturatak da yapabiliriz. Aldığımız değerleri barındıran değişkene toString() methodu uygulayıp sayfada göstermek yeterlidir.

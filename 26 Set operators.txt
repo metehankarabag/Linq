@@ -1,0 +1,19 @@
+Distinct, Union,Intersect,Except
+
+Distinct: Koleksiyondaki farklı nesneleri döner. Distinc() operatörünün 2 overload'ı var birincisinin büyük- küçük harf duyarlılığı yoktur. Bu duyarlılığı vermek için 2. overload'ı kullanıyoruz ve parametre olarak IEqualityComparer<T> istiyor. Biz StringComparer.OriginalIgnoreCase veriyoruz. Bu class türediği için oluyor.
+COMPLEX TYPE'lar ile çalışırken DISTINCT() operatörü referanları karşılaştırır. Sadece refansların aynı olduğu durumda ikilemeyi görebilir. Yani COMPLEX TYPE içindeki veriyi değerlendirmez.
+Bunu sağlamak için bir CLASS açıp IEqualityComparer<T> INTERFACE'sini kullanıyoruz. Bunu uygulayabilmek için 2 metod var. Equals ve GetHashCode.
+Not: GetHashCode() method gereklilikten kaynaklanıyor. Bir CLASS'ın Equels() methodunun üzerine yazdığımızda bu methodda da gerekli ayarları yapamalıyız. Bu method da dışarıya çıkacak PROPERTY'lere GetHasCode methodlarını kullanıyoruz. Parametreler arasında ^ koyuyruz.
+Sonra CLASS'ımızın bir örneğini parametre olarak DICTINCT methoduna veriyoruz. - Yeni bir CLASS oluşturup bu CLASS'ı kullanmak yerine verilerin geldiği CLASS'da üstteki işi yapabiliriz.
+
+UNION: Aynı elemanları silerek 2 koleksiyon bir koleksiyonda birleştirir. parametre olarak bir koleksiyon alır ve bir koleksiyona uygulanır. COMPLEX TYPE nesneler ile oluşturulmuş koleksiyonlarda DISTINCT gibi UNION INTERSECT, EXCEPT aynı sorunu verir.
+3 yolu var.
+1. methodun 2. overload'unu kullanmak
+2. COMPLEX TYPE içinde Equal() ve GetHashCode() methodalarına yazmak
+3. En kolayı, Liste PROPERTY değerlerini Anonymous Methodlara yansıtmak.
+Bunun için ilk listeye .Select() uyguluyoruz. içinde Anonymous method ile değer çıkartıyoruz. Artık gerçek değerli barındıran liste geldi. Şimdi Union uygulayıp	içinde 2. listeye tekrar aynı şekilde select uyguluyoruz. Artık karşılaştırılacak gerçek değerler çıktı.
+
+Intersect() Koleksiyonlardaki ortak elemanları döner.
+Except() operatörü ise birinci koleksiyonda olan ama 2. koleksiyonda olmayan elemanları döner.
+ 
+

@@ -1,0 +1,11 @@
+Geçen derste HARD CODE kullandık.
+Bu derste SQL'e benzeyen LINQ sorguları kullanarak bir CLASS'daki veri ile XML dosyasını oluşturacağız.
+Not: LINQ sayılabilir nesnelere uygulanır.
+
+XML dosyası tamamen kodla oluşturalacağı için standar bölümleri değişmeyecek. Yani ana ELEMENT'in altındaki ELEMENT'leri oluşturacağız. 
+Bu yüzden LINQ'u ROOT ELEMENT'i belirten CLASS CONSTRUCTER'i içinde oluşturmamız gereliyor.
+XElement() CLASS'ı 1. parametre olarak ELEMENT'in adını alır. 2 parametre olarak varsa ATTRIBUTE'unu yoksa alt ELEMENT'lerini alır.
+Attribute'u XATTRIBUTE CLASS'ının 1. parametresine özellik adını 2. parametresine değerini verekek ekleyebiliriz.
+Alt element içinde XElEMENT CLAS'ını üstteki gibi kullanıyoruz.
+
+Tüm işlerimiz bittiğinde Xdocüment CLASS'ının örneğine, Xml dosyasının kaydolması için kaydedileceği yolu belirterek SAVE() methodunu uyguluyoruz.

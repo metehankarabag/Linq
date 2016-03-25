@@ -1,0 +1,2 @@
+XML'den başka bir XML'e çevirme.
+Hieraşi çevirme işi yapıyor. Yeni bişey yok uygulamayı istediğim hieraşiye göre veriyi çekip dağatacağım.

@@ -1,0 +1,13 @@
+Linq sorguları oluşturmak için linq operatörlerini kullanırız.
+- Select forom where orderby join groupby ..
+
+Linq yazmanın birden 2 yolu var.
+1. Lambda Expressions
+2. SQL'e benzeyen sorgular - select from ..
+
+Performans olarak aralarında bir fark yok.
+Fakat önemli bir nokta LINQ'lar derlenmeden önce LAMBDA EXPRESSION'lara çevirilir.
+
+LINQ'nun  IENUMARABLE<T> arayüzündeki methodlara ek olarak uygulanır.
+
+Sql'e benzeyen linq kullanacaksak linq her zaman select sorgusu ile biter. Yani Linq düzeni sql sorgu düzeninin tam tersidir.

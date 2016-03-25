@@ -1,0 +1,6 @@
+LINQ to SQL CLASS'ları oluşturmak için kullanılan komut satırı aracıdır.
+Microsoft SDK\Windows\v7.0A\bin içinde exesi var.
+
+Command Promd'a sqlmetal.exe /? yazdığımızdaa tum kullanım şekillerinin seçenekelerini görürürüz.
+
+Wicrosoft linki var tüm bu kullanımı barındıran.

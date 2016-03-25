@@ -1,0 +1,4 @@
+LINQ sorguları ile yaptığımız işi PROGRAMDA SQL sorguları kullanarak yapma işine denir.
+Bunun için sorguyu ExecuteQuery<t>() methodu içine yazıyoruz. Metod IEnumarable<T> dönüyor. Bu method sadece SELECT sorgusu için çalışır.
+INSERT UPDATE DELETE sorguları için ExecuteCommand() methodunu kullanıyoruz. Method etkilenen satır sayısını döner.
+Kullanımı iyi değil.

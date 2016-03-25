@@ -1,0 +1,9 @@
+CrossJoin uygulamak için SQL'e benzeyen sorgularda join anahtarını kullanmaya gerekyok.
+2 form ile CLASS bilgilerini alıp, select'e uyguladığımız anonymous methodda bunları çıkartığımızda, otomatik olarak bu oluyor.
+
+Extension methodlar ile 2 yolu var - selectMany() ve Join()
+selectMany uygulandığı nesne öğeleri ile parametre olarak aldığı nesne öğelerini birbiri ile eşleştirir.
+Join(): 2 overload'ı var 1. 4 parametre bekliyor. 
+1. nesne 2,3 keyler, 4 sonuçu veren method
+
+Not: Anonymous method'a gelecek bilgiler üzerinde oynama yapmayacaksa PROPERTY oluşturmaya gerek yok. Anonymous method içini oluşturduğumuz paratreleri içeriye yazarak bunların dışarıya çıkartabiliriz.

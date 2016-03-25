@@ -1,0 +1,24 @@
+Group join: hieraşik veri yapıları üretir.
+İlk koleksiyonfaki her eleman 2. koleksiyondaki ilişkili eleman setleri ile eşleştirilir.
+
+Extension method kullanımı - Groupjoin()
+Sql'e benzeyen kullanımı - join operatörü ve into anahtar kelimesi ile olur.
+
+Extension method kullanımı
+Groupjoin()'in 2 overload'ı var. 
+1. overload 4 parametre alır.
+1. parametre Groupjoin() operatörü parametre olarak IEumarable<t> alır. T bizim oluşturduğumuz COMPLEX TYPE(CLASS) olmalıdır. Çünkü CLASS içinden bir PROPERTY'i FORIGN KEY olarak ayarlayıp, FOEIGNKEY ile CLASS'dan başka bilgiler alacağız. SIMPLE TYPE olsaydı sadece bir tür veri olurdu onuda KEY olarak kullandığımızda geriye bir şey kalmazdı.
+Groupjoin()'in uygulandığı sayılabilir nesne OUTERCLASS
+Groupjoin()'e parametre olarak eklenen nesne INNERCLASS olur.
+2. parametre OUTER'da KEY olacak PROPERTY'i belirler. Extension method ile bir parametre oluşturduğumuzda otomatik olarak türü OUTER TYPE olur.
+3. parametre INNER'da KEY olacak PROPERTY'i belirler. Yine Extension method kullanarak oluşturduğumuz parametre INNER TYPE'ı alır.
+4. Tüm bu işlemlerin sonucunun toparlanıp değişkenden ulaşılabilirliğinin belirlenmesi içindir. 
+ANONYMOUS METHOD içinde PROPERTY'ler oluşturup bunlara değerleri veriyoruz. Bu PROPERTY'ler sayesinde değişkenden değerlere ulaşabiliyoruz.
+
+Yani 1. parametre nesne, 2 ve 3. Extension method ile belirlenmiş KEY'leri 4. parametrese sonucu yansıtan ANONYMOUS METHOD ile oluşur.
+
+Not: GROUPJOIN, OUTERSEQUENCE'de belirlediğimiz KEY'in INNER'de karşılığı yoksa bile OUTERSEQUENCE'dan alınan veri sonuca eklenir.
+
+SQL'e benzeyen sorgular ile kullanımı
+JOIN operatörü ile INNERCLASS'ı belirliyoruz.
+On anahtarı koşulun belirlendiği yerdir. Burada eşitlik kontrolü için == kullanamayaız. "equals" anahtarını kullanarak eşitliği sağlayıp into ile sonuca bir takma ad veriyoruz. Son olarak sonucu yansıtmak için Select anahtarından sonra yeni bir method oluşturuyoruz. Bu çok daha kolay

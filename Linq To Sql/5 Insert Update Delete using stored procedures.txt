@@ -1,0 +1,2 @@
+Tüm sorgular için oluşturduğumuz STORED PROCEDURE'leri LINQ to SQL sayfasında boş bir yere atıyoruz. Sonra İşlemlerin uygulanacağı Entity ile ilişkilendiriyoruz. Bunun için Entitiy'e sap tıklayıp CONFIGURE BEHAVIOUR'ı kullanıyoruz. 
+ UB methodların yaptığı çey entity deki değişiklerikleri otomatik olarak veritabanına uygulamak herhalde. Çünkü Kodda bu methodları kullanmadı elle yazdığımız geçen dersteki işlemleri kullandı.

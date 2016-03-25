@@ -1,0 +1,5 @@
+Geçen dersin devamı 
+Cast: Bir koleksiyondaki veri türünü başka bir türe çevirme işidir. çevirilen veri yenibir koleksiyon içinde dönderir.
+Oluşturulduğu yerde değil kullanıldığı yerde çalışır.-DEFERRED EXECUTION
+Kullanımı .Cast<T>();
+OfType(): Koleksiyondan belirtilen Type'a uygun öğeleri döner diğerlerini bırakır.

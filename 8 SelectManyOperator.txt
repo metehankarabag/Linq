@@ -1,0 +1,15 @@
+SelecMany() operatörü bir koleksiyonun tüm elemanlarını IEnumerable<T> ye yansıtır ve koleksiyonları bir IEnumerable<T> düzenler.
+Yani SelectMany() uygulandığı sayılabilir nesneden LAMBDA ile birden fazla elemanı olan bir PROPERTY'sini aldığımızda. Sonuç IEnumerable<T> ye verilir ve tüm elemanlar için ayrı ayrı sonuç veren PROPERTY verileri bir IEnumerable<T>'de tutulur.
+
+SQL'e benzeyen LINQ'lar oluşturduğumuzda da bir sütunun tüm değerlerini birleştirir.
+
+Aynı işlem bir düzüye uygulandığında dizin tüm elemanılarının karakterlerini tek bir IEnumerable<CHAR> da birleştirir.
+
+Not: Distinc() operatörü birleştirilmiş listele bir öğeden birden fazla görmek istemiyorsak kullanırız.
+SQL'e benzeyende LINQ'da da sonucu veren sorguyu parantez içine alıp yine distinc() operatörünü kullanıyoruz.
+
+
+Select() ile selectMant() operatörleri arasındaki var.
+PROTECTION operatörleri sorgu sonucunu çevirmek için kullanılır.
+Select uygulandığı nesne PROPERTY'nin türünde sayılabilir nesne döner.
+SelectMany() uygulandığında PROPERTY içeriğini oluşturan türün listesi oluşturulur. 

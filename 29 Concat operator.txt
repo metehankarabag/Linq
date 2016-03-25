@@ -1,0 +1,2 @@
+Concat 2 diziyi tek bir dizide birleştirir.
+Uniondan farkı aynı öğeler silinmez.

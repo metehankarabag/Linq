@@ -1,0 +1,2 @@
+LINQ to SQL sayfasına STORED PROCEDURE'i attığımızda, otomatik oluşan c# kodu çıkış paramatresini ref anahtarı belirtir.
+Referans parametre nedir?

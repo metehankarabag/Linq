@@ -1,0 +1,3 @@
+LAZY LOADING: Birbiri ile bağlantılı ENTITY'lerin bir birinden bağımsız yüklenebilir olmasıdır.
+Yani bir entity yüklendiğinde ilişkili olan entity yüklenmemiş olabilir.
+Bunun nedeni Entity'lerin bir döngü ve veri bağlantısına sokulduğunda çalışmasıdır. 2 entity aynı anda bağlantıya sokulamaz.	

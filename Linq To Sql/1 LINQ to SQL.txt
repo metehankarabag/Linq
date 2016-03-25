@@ -1,0 +1,9 @@
+LINQ TO SQL veri tabanı tablolarını bazlarak STRONGLY TYPED .net CLASS'larını otomatik oluşturan bir ORM(Object Relational Mapping) Frameworkdür.
+LINQ TO SQL sağlayıcısı LINQ sorgularını Transact-SQL sorgularına çevirir.
+
+LINQ TO SQL  transactions, view ve stored procedure destekler. Sadece SQL Server veri tabanını destekler. - Oracle gibi olanları desteklemiyor.
+
+Projeye bir LINQ TO SQL dosyası ekmek için DATA içine bak.
+açılan Server Explorer'dan veri tabanlarını çek.
+
+Nasıl çalıştığını biliyoruz. SQL'e benzeyen LINQ sorguları veri tabanına giderken SQL'e çeviriliyor.

@@ -1,0 +1,4 @@
+Select ve SelectMany operatorleri bu alandadır.
+PROJECTION OPERATOR'ler bir sorgunun "sonucunu çevirmek" için kullanılır.
+SQL'de SLEECT sorgusu almayı istediğimiz sütünları belirlemeye sağlar.
+LINQ'da SELECT operatörü aynı şekilde PROPERTY'leri belirlemeyi sağlar. Ayrıca hesaplar yapmamızıda sağlar.

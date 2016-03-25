@@ -1,0 +1,21 @@
+Where operatörü RESTRICTION operatörler sınıfına girer.
+Where LINQ'da da filitreleme amacı ile kullanılır ve PREDICATE kullanılarak belirlenir.
+
+Where Extension methodunun açıklaması : 
+Extension methodların bir nesne örneğine uygulandığında birini parametresi görünmez.
+2. parametresi GENERİC olan bir DELEGATE istiyor.(FUNC)
+Yani giriş ve çıkış parametre türleri DELEGATE'in her herkullanımda belirtilmelidir. Yani DELEGATE GENERİC TYPE'ları extension methodun 2. parametrede belirtilerek microsoft tarafından tanımlanmış.
+
+- Giriş türü; extension methodun uygulandığı sayılabilir nesnenin türü verilmiş.( Yani dinamik tür)
+- Çıkış türü; BOOLEAN (sabit) - Yani WHERE'in oluşturulmuş bu overload'ı her zaman BOOLEAN döner.
+
+DELEGATE'in istediği methodu LAMBDA ile taklit ettiğimiz için bir LAMBDA parametresi oluşturduğumuzda, TYPE'ı istenilen methodun giriş parametre türü ile aynı oluyor. Bu tür sayılabilir nesneden alındığı için LAMBDA parametre türü ile sayılabilir nesne türü aynı oluyor.
+METHOD boolean değer döneceği için LAMBDA ile yaptığımız işin sonucu boolean olmassa hata alırız. Yani 2 generic type isteyen DELEGATE için 2. tür işlem sonucu belirtir.
+
+Where enxtion methodunun 2 overload'ı var. 2. overload 2 giriş parametresi istiyor. Birinci parametre uygulanan sayılabilir nesnenin türünde 2. parametre ise nesnedeki öğelerin index'i için
+Aynı durum select() extension methodunda de geçerli
+
+Not: LAMBDA oluşturulurken => işaretinden önce parametreler sonra işlemler gelir. Anonymous METHOD oluşturulurken işlem yerine {} ile yeni bir alan açarız. Bu alan metod olarak adlandırılır. Oluşturduğumuz parametreler bu anonymous methodun propertyleri olarak adlandırılır. 
+LAMBDA'da kullanırken aldığımız sonucun türünü yaptığımız işlemin sonuç türü belirliyordu. Burada işlem yerine Anonymous metod kullandığımız için türü bu metod belirliyor ve belirsiz olduğu için sadece VAR türündeki değişekenlere atabiliyoruz.
+Bir nesneye uygulanmış bir metod'un sonucunu bir değişkene atmadan yine işleme sokabiliriz.Örnek select(--).where(--) SELECT() içinde anonymous method kullandık. Bu metohdun tüm propertyleri sanki nesneden çekiliyormuş gibi sonra uygulanan tüm methodlarda da geçerlidir.
+

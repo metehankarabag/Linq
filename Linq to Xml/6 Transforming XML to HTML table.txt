@@ -1,0 +1,3 @@
+Xml'i HTML'e çevirme
+Yeni dosya türünü geçen derstede gördüğümüz gibi Save() methoduna verilen dosya uzantısı belirler.
+bizim yaptığımız Veriyi XML'den formatlayarak çekmek. Bu yüzden bu derste XDocument() CLASS'ı ile yeni bir XML oluturur gibi işlem yapıyoruz ve düzeni bir HTML tablosuna benzetiyoruz. Yani düzende HEADER, BODY, FOOTER TAG'larını temsil eden XElement() nesneleri kullanıyoruz. LINQ ile geçtiğimiz verileri bu taglara uygun bir şekilde atıyoruz.

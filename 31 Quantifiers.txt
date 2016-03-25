@@ -1,0 +1,13 @@
+All,Any,Contains 
+Belirliten koşulun bazı veya tüm liste elemanları tarafından sağlanması durumuna göre true/false döner.
+All(): Dizideki tüm elemanlar için koşul sağlanırsaa true döner.
+
+Any(): 2 overload'ı var.
+1. boş dizide bir eleman varsa true döner
+2. extension method bekliyor. Methodda belirtilen koşul herhangi bir eleman tarafından sağlanırsa true döner. 
+
+Contains() 2. overload'ı var.
+1. 1 parametre alır. parametreye girilen değer dizide varsa true döner.
+2. 2. parametre büyük küçük harf duyarlılığını yoksaymak için StringComparer.OriginalIgnoreCase özelliğidir.
+
+Method bir referans türüne uygulanırsa, varsayılan olarak methoda parametre olarak eklenmiş nesnenin referansı ile karşılaştırılır.

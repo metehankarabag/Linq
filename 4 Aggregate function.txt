@@ -1,0 +1,30 @@
+/*Aggregate Functions
+      LINQ operatorleri yaptıkları işlere göre kategorilere ayrılır.
+      Aggregate Operators
+      Grouping Operators
+      Restriction Operators
+      Projection Operators
+      Set Operators
+      Partitioning Operators
+      Conversion Operators
+      Element Operators
+      Ordering Operators
+      Generation Operators
+      Query Execution
+      Join Operators
+      Custom Sequence Operators
+      Quantifiers Operators
+      Miscellaneous Operators
+     */
+	 
+
+Aggregate Operators
+Bu operatörler - Max -Min -Sum -Count -Avarage bu derse görülecek -Aggregate gelecek derste
+
+Aggregate() extension method'un 2 overload'ını göreceğiz.
+Birinci overload sadece linq'u alır. 
+Bu LINQ'da methodu methodu kullanabilmemiz için 2 parametre oluşturmamız gerekiyor(Sonra bu parametreleri işleme soruyoruz.). Aggregate() extension methodun bu kullanımda LINQ parametreleri methodun uygulandığı sayılabilir nesneden 2 değeri alır. Alınan bu değerler işleme girdikten sonra LINQ'da belirtiğimiz ilk parmetreye verilir. Yani ilk parametre sayılabilir nesneden sadece bir kez değer alır. Sonraki değerleri linq işleminin sonucudur. ikinci parametre ise sürekli nesneden yeni değer alır. İkinci parametreye nesneden değer gelmesse son işlem çalışmaz ilk parametredeki değer çıkar.
+
+Methodun ikinci overload'ı 2 parametre alır. Birinci parametre SEED değeri, ikinici LINQ, LINQ'nun kullanım mantığı üstteki gibi. SEED değeri kullanılırsa LINQ'nun ilk parametresi sayılabilir nesneden hiç değer almaz SEED'deki değeri alır.
+
+Yani ikinci overload'da LINQ'unun ilk parametresinin değerini dışarıdan alabilriz.

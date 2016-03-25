@@ -1,0 +1,9 @@
+Genellikle Anonymous method'lar birden fazla anahtarla gruplama yapmak için kullanılır.
+.GrupBy() operatörü içinde bir Anonymous method oluşturup aralarına virgül koyalarak değişkene 2 farklı Key değeri giriyoruz.
+GrubBy'dan sonra OrderBy().ThenBy() operatörleri kullanılmış. Bu sıralama key'leri Gruplama işelemlerinde geçerlidir. Gruplar içindeki elemanlar için gereçli değildir. Çünkü GrupBy() operatörünün sonucuna uygulanıyor.
+Gruplar içindeki elemana oluşak için Select() operatörü içinde Anonymous method kullanıyoruz. Çünkü operatör içinde oluşturduğumuz parametre bize elemanları temsil eder. 
+
+SQL'e benzeyen sorgularda
+Group Value by 'dan sonra ANONYMOUS method kullanıp 2 KEY değeri belirliyoruz. Sonuca into ile bir takma ad verioyuruz.
+Grupları sıralama işi için Orderby anahtarından sonra aralarına virgül koyarak yapıyoruz. Bu sıralama gruplar için geçerli.
+Gruplar içindeki öğeleri sıralamak için select anahtarından sonra ANONYMOUS METHOD kullanıyoruz.

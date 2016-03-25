@@ -1,0 +1,8 @@
+Bir LINQ sorgusu çalıştırıldığında, sorgu şemasını ve bu şemaye göre T-SQL açılmamalarını dinamik olarak oluşturmak sorundadır. Bu LINQ her çalıştığında gerçekleşir. Bundan LINQ'u düzenleyerek kurtulabiliriz.
+bunun için CompiledQuery CLASS'ının Copile() metodununu kullanıyoruz.
+CLASS System.Data.Linq içinde
+Methodun 16 overload'ı var 1.si sadece Func<> delegatesi istiyor. Delegate'e 15 parametre alabiliyor.
+LAMBDA ile 2 paramtre oluşyuturup anonymous method kullanıyoruz. Aynı LINQ sorgusunu bu method içinde yazıyoruz ve değerlerini parametrelerden veriyoruz.
+
+Sonucu tutan değişken METHOD olarak kullanılabilir.
+LAMBDA ile oluşturduğumuz 2 parametreye değer verip, bu değerlere göre sorguyu çalıştırıyoruz. Artık LINQ derlendi. 

@@ -1,0 +1,10 @@
+Çevirme operatörleri bellidir. Az kullandıklarım - asEnumarbale, AsQueryable, OfType, Cast, ToLookup
+ToList(),ToArray,ToDictionary() - hemen çalışır.
+
+ToDictionary(): methodunun 4 farklı overload'ı var.
+1. 2 LAMBDA parametresi alıyor. - Kev ve Value için.
+Tabi bunu listedeki bir itemden alabilmemiz için Liste itemleri birden fazla type içeren COMPLEX TYPE'lar olmalı(CLASS).
+2. overload sadece KEY için 1 LAMBDA ister. DICTIONARY'nin Value TYPE'ı, liste oluşturulurken kullanılan CLASS olur ve listeye eklenmiş CLASS örnekleri olduğu gibi DICTIONARY'inin VALUE PROPERTY'sine eklenir.
+Yani artık Value PROPERTY'sinden CLASS'ın tüm PROPERTY'lerine ulaşabiliriz.
+
+ToLookup(): Dictionary'e benze ark. Belirlenen Key değerleri dictionary'de özel olmalı. Lookup'da aynı Key değeri birden fazla kullanılabilir. Lookup()'un Key değerlerinin aynı olması Lookup'a alınan nesnelerin gruplanabilirliğini sağlıyor. Çünkü Lookup dizi şeklinde [] kullanılıp içine Key değeri alabilir bu değer uygun olanlara ulaşabiliriz. -dictionary'de varmı denemedim.

@@ -1,0 +1,12 @@
+Range Repeat Empty
+Range():Enumarable CLASS'ının statik methodudur. 2. parametre alan tek overload'ı vardır.
+1. paramater başlangıç sayısı, 2. kaçtne öğeden oluşacağını belirler.
+Bu methodun aldığı değerlere where gibi operatörler uygulanabilir. Böylece işlem yazmak yerine tek satırda iş biter.
+
+Repeater():Enumarable CLASS'ının statik methodudur. 2. parametre alan tek overload'ı vardır.
+1. Parametre tekrarlanacak string, 2. parametre tekrarlanma sayısı
+
+Empty<t>(): Belirtilen türe göre boş bir IENUMARABLE<T> dizisi döner.
+Kullanım şekli- Kendi yazdığımız bir programda 3. sahısların yazdığı bir class'dan bir liste verisi(vs..) almayı istiyorsak, listeye geldiği yerde ne olduğunu bilmediğimiz için listeyi direk işleme sokamayız. Çünkü bir şeyler değiştiğinde liste null olabilir. Bu durumda yazdığımız kod hata verir. Bunu düzelmek için if ile kontrol edebilir veya listeye Empty<t>() operatörünü uygulayarak. Null gelen listeniyi boş bir listeye çevirebiliriz.  
+
+not: ?? işleçi solundaki nesnenin null olup olmadığını kontrol eder. NULL sa sağındaki değilse solunaki veriyi dönderir. Sol taraftaki veri null'ığı kontrol edilen ile nesne türü ile aynı olmalı.

@@ -1,0 +1,12 @@
+LinqPad tool: linqpad.net'den indirebileceğimiz beleş bir araçtır.
+LinqPad LINQ QUERIES'leri öğrenmeye yazmaya ve testetmeye yardım eder.
+
+Dump() methodu indirdiğimiz araçta sonucu yazdırma işi görür.
+Console.WriteLine() gibi
+
+Alt pencerede 4 sekme var biri LAMBDA SQL ve IL(arayüz dili)
+Burada yazılan LINQ sorgularının çalıştığı ortamdaki karşılıkları görünüyor.
+LINQ ile bir nesneye bağlanmışssa sonuç LAMBDA işaretinin altında görünür. Bunun olması için ya sorguda nesne örneğine yada nesneyi oluştururken kurucu tarafa AsQueryable() methodunu uygulamalıyız.
+2. yi taptığımızda nesne örneğinin türü Var olmalıdır.
+
+LINQ sorgusu ile SQL bağlanabilmemiz için bir uygulamada var. Buradan Microsoft market ve WCF servislerede bağlanabiliriz. SQL bağlantısı EntityFrameworkdeki arayüze benziyor.

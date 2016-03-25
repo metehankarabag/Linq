@@ -1,0 +1,9 @@
+Xml formatındaki dosyayı CSV'e LINQ to XML kullanarak çevirmeyi görecez. Html ve farklı bir xml formatlarına da göreceğiz.
+XDocument CLASS'ına Load() methodunu uyguluyoruz. 
+Sonra XMl'den almayı istediğimiz Element'lere varsa alt elementlarıne ulaşıyoruz. Kolay olsun diye ForEach() metohdunu kullanmalıyız. Descendants() methodu IEnumarable döndüğü için ForEach() methodu yok. Bu yüzden ToList() uyguladıktan sonra ForEach() uygulayabiliyoruz.
+Method içinde LAMBDA ile oluşturduğumuz değişken, ana elementin alt elemanlarını temsil eder. Sonuçları StringBuilder Class'ına yazdığımız için değişkendeki değerleri Append() methodu içinde çekiyoruz ve aralarıne "," ekliyoruz.
+
+Not: ToList() methodu Descendants() methodu parametresinde belirlediğimiz her ana elementi ayrı ayrı listeye çevirir. Sonra işleme sokarız. Yani tüm sonuç bir stringbuilder örneğinde birleşecek.
+Ayarları buna göre yapmak lazım.
+
+Artık azırladığımız string'i StreamWriter CLASS'ı ile CSV dosyasına yazabiliriz.

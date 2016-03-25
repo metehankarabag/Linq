@@ -1,0 +1,15 @@
+Left Outer Join - OUTER JOIN: Geçen derste GROUPJOIN ile aynı demişti
+Left Outer Join'in SQL'e benzeyen sorgular ile kullanımında
+GROUPJOIN'de yaptığımız into ile sonuca takma ad verme işine kadar aynı
+GROUPJOIN'de into'dan sonra select geliyordu, OUTERJOIN'de ise from ile bir sorgu geliyor.(from x in takma ad) Takma ada DefaultIfEmpty() operatörünü uyguluyoruz ve sonra select uyguluyoruz.
+
+GROUPJOIN ile SQL'deki OuterJoin birbirine benzer demişti.
+İkiside OuterCLASS verisini karşılığı olmasa bile gösteriyor ama buradaki OuterJoin'in sonucu hieraşik değil düz.
+bunun nedeni GROUPJOIN'i kullanıken INNERCLASS'ın tüm sonuçları barındıran takma addan, bütün halinde almamız.
+Bu derste eklediğimiz son from sorgusu ile takma addaki INNERCLASS verilerini tek tek alıyoruz.
+Takma addaki veri ile INNERCLASS'daki gerçek veri arasındaki fark;
+OUTERCLASS'dan gelen KEY'in INNERCLASS'da karşılığı yoksa Takma adda boş bir referans tutulur. Böylece OUTERCLASS verisi koşul sağlanmadığında bile select girer ve sonuca eklenir.
+Yani Key eşleşmesi olmassa otomatik olarak key'in karşısına değer veriliyor.
+INNERJOIN kullanırken into ile bu işi yapmadığımız için KEY karşılığı yoksa select sorgusuna girmiyor ve sonuca eklenmiyor.
+ve
+Otomatik girilen değer boş değer olduğu için defaultifempty() methodu ile bunu sildiğimizde hata alıyoruz. Eğer bu metodu uygulamassak GrupJoin'den de düz sonuç alabiliriz.

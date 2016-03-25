@@ -1,0 +1,16 @@
+15. dersin devamı
+AsQueryable operatörünün 2 overload'ı vardır.
+1. IEnumarable'ı IQueryable'a çevirir.
+2. IEnumarable<T>'i IQueryable<T>'e çevirir.
+Bu operatörün asıl kullanımı unit test'lerde olur. Hafızadaki bir veri kaynağını taklit etmek için kullanılır. Unit Test için bir video serisi hazırlayacakmış.
+
+Veri tabanından veri çemek için yazdığımız her kod için SQL'de kodların tam karşılığını veren bir SQL sorgusu oluşturulur.
+
+AsEnumarable() operatörü: Oluşturulacak SQL sorgusunu 2 ye böyler.
+INSIDE PART  AsEnumarable()'dan önce yazılan operatörlerdir(kodlardır).
+Bunlar SQL'de çalıştırılır. - LINQ to SQL
+OUTSIDE PART AsEnumarable()'dan sonra yazılan operatörlerdir(kodlardır).
+bu kodlar SQL'den gelen nesneler üzerinde CLIENT tarafında çalıştırılır.
+-LINQ TO OBJECT
+
+Yani AsEnumarable() sadece yazıldığı yerin üstündeki kodları SQL'de çalıştırılacağı için SQL'de oluşturulan sorgu kısalır.

@@ -1,0 +1,3 @@
+Daha önce Entitiy Framework'de yapmıştık. Bir veri tabanı tablosunda farklı türlerdeki veriyi tutmak için yapıyoruz. Her farklı türdeki veri property'lerini Entity'lere böylerek program içinde farklı veri bölünmüş tablolarla çalışıyoruz.
+Bunu yapmak için ana Entity'i abstract yapmak ve alt Entity'ler ile ilişki kuracak property'i alt Entity'lerde birleştirilme değeri ile belirlemek.
+Yani bir tabloyu birden fazla Entity'i bölüp tek tablo halinde veri tabanında tutuyoruz.

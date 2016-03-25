@@ -1,0 +1,12 @@
+Xml'den nasıl veri alırız. 
+SQL'e benzeyen LINQ'da
+
+LINQ'ya veriyi XML dosyasından alacağımız için.
+XDocument CLASS'ının static metodu LOAD()'ı kullanırız.
+Fakat bu iş dosyanın kendisini işleme sokar.
+Biz dosyanın ROOT ELEMENT'lerinin altındaki ELEMENT'lere ulaşmamız gerekir.
+Bunun 2 yolu var.
+1. LOAD methodundan sonra DESCENDANTS() methoduna bir ELEMENT adı vererek uyguluyoruz. Method adı XML'de arar. Bulduğu Elementleri temel alan ve alt Element'ini de içeren liste halinde döner.
+Yani sorgu değişkeni Element() methoduna parametre olarak verilen Elementler temsil eder. Bu elemenlerin alt elemenlerin alt Elementleri ile sorgulama yapacağımız için sorgu değişkenine Element() methodunu tekrar uygulamalıyız.
+
+2. yol DESCENDANTS() yerine 2 kez  Element().Element() methodlarını uygulamak. Böylece sorgu değişkeni hem temel elemenleri hemde alt elementlerini barındırır.

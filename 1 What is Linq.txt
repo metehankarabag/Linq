@@ -1,0 +1,11 @@
+LinQ: Kullanarak herhangi bir veri türünü sorgulayabiliriz.
+Yani aynı komutlarla farklı türdeki listeleri çalıştırmamızı sağlar.
+Linq'de birden fazla PROVIDER vardır. 
+Sorgudan alınan veririnin türüne göre PROVIDER'lardan biri çalışır ve sorguyu düzenler.
+
+New - item Penceresi - Data - Linq to SQL Class dosyasını projeye ekleyip, Server Explorer penceresinden veri tabanına bağlanıp bir tablo alıyoruz.
+Aldığımız tablonun kodları Linq to SQL Class ile gelen dbml dosyasına eklenir.
+Bu Class'daki bir nesneyi LINQ'da kullanırsak, yazdığımız kod veri tabanında çalışacak.
+
+Linq oluşturmak için anahtar kelimeler - from(biri) in(liste) where select
+Avantajları: Düzenleme zamanı hatası verir.

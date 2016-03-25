@@ -1,0 +1,19 @@
+Genellikle element operatörleri bir diziden belirtilen index veya koşula göre bir elemanı almak içi kullanılır.
+
+First: 2 olverload'ı var. 
+1. Boş olandır dizideki ilk elemanı döner. Dizide bir eleman yoksa hata verir.
+2. overload bir delege ister boolen sonuç veren bir işlem belirmeliyiz.
+Yeni dizi boşken ve koşula uyan bir eleman yoksa hata verir.
+
+FirstOrDefault: Hata vermez. dizi boşken veya koşulla eşleşme sağlanamassa varsayılan değeri döner.
+
+Last ve LastOrDefault: üsttekilerin aynısı. Son elemanları alıyor.
+
+ElementAt(): Parametre olarak index alır. Verilen değerin dizide karşılığı yoksa hata verir. ElementAtOrDefault: Hata vermez.
+
+Single: 2 overload'ı var boş olanı Dizi içinde sadece bir eleman varsa onu alır. Daha fazla varsa hata verir.
+2. overlad'ı Konuşla göre çalışır dizi içinde bir koşula uyan bir elemanı alır.
+1 den fazla uyan eleman varsa, dizi boşsa veya koşula ulan eleman yoksa hata verir.
+SingleOrDefault(): Dizide birden fazla koşula uyan eleman varsa hata verir. Onun dışında hata vermez.
+
+DefaultIfEmpty(): 1. overload'ı Dizi doluysa dizi elemanlarını döner boşsa varsayılanı döner.

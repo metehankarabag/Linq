@@ -1,0 +1,2 @@
+Extension Method'lar static bir CLASS içinde yazılmış, static methodlardır ve methodların ilk parametresi önüne this yazılmalıdır.
+Kullanırken bu methodlar sanki INSTANCE method gibi bi nesne örneğine uygulanabilir. Ayrıca ait olduğu CLASS'ın static methodu olarak da kullanılabilir.

@@ -1,0 +1,9 @@
+Take, Skip, TakeWhile, SkipWhile - Standart querty  opratörleri bu grupdadır.
+Take: Bir koleksiyonun başlangığından belirtilen sayıda elemanı döner.
+Dönülecek eleman sayısı Count parametresi ile belirlenir.
+Sql'e benzeyen LINQ'lar kullandığımızda, sorguyu parantez içine alıp metod'u aynen uyguluyoruz.
+
+Skip() operatrü take() ile aynı mantıkla çalışır. Fark ilk üç elemanı dönmez atlar ve geri kalanları döner.
+
+While'lı olan türleri ise parametre olarak aldıkları koşul doğru olduğu sürece döner veya atlar ve koşul ilk kez boulduğunda işlem biter.
+	

@@ -1,0 +1,9 @@
+Birbiri ile ilişkili Entity'leri birlikte yüklme işidir.
+2 yolu var
+1. DataLoadOptions sınıfının LoadWith<T>() methodunu kullanmaktır. 
+Paramatre olarak LAMBDA ile oluşturduğumuz parametre ile TYPE olarak belirlediğimiz ENTITY'nin NAVIGATION PROPERTY'sini seçiyoruz.
+Böylece TYPE olarak belirttiğimiz ENTITY yüklendiğinde diğer ENTITY de tek bir sorgu içinde yükleniyor.
+Bunun olması için DATALOADOPTIONS örnneğini DBCONTEXT CLASS'ın LoadOptions PROPERTY'sine atmamız gerekir.
+Bu Class - System.Data.Linq namespacesindedir.
+
+2. yol PROJECTION: Bir LINQ sorgusu oluşturuyoruz. Select anahtarında olşturduğumuz ANONYMOUS metod'da Entity'nin NAVIGATION PROPERTY'sini kullandığımız için 2 entity tek bir sorguda birleşiyor.

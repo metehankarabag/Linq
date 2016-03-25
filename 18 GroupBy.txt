@@ -1,0 +1,16 @@
+Gruplama operatörüdür ve tekdir.
+Bir itemler dizisi içinde bir düzelmi alır.
+Bunu belirtilen KEY'e göre düzenler ve gruplar.
+Bu düzenleme ve dönme işi IGROUPING<K,V> INTERFACE'i üzerinden yapılır.
+not: LAMBDA'dan sonra işlem gelirse,  Extension Method kullanmış oluyoruz.
+
+SQL'e benzeyen LINQ'larda grublama işlemi için veri alındıktan sonra
+"grub Value by KEY" değerleri verilerek yazılır. Select sorgusu kullanmaya gerek yok.
+
+Tüm grubların ve gruplardaki elemanları sıralanmasını istiyorsa,
+grup KEY'ını belirledikten onra INTO ile sonuca takma ad veriyoruz.
+Sonra Select new ile ANONYMOUS METHOD oluşturuyoruz.
+Bu method içinde takma isim üzerindeki bilgileri metod PROPERTY'lerine alırız.
+Artık değişkene giden sonuç son işlemdeki sonuç olduğu için takma addan aldığımız verilere uyguladığımız tüm işlemler geçerli olacak.
+
+Not: Select sorgusundan önce orderby ile takma addan Key değerlerini sıralamış. Galiba 2 kez kullanılamadığın için Employee sırasını metod içinde yapmış. Büyük ihtimalle KEY değerinide method içinde OrderBy() operatörünü kullanarak sıralayabiliriz.

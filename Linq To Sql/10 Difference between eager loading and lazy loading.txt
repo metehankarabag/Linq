@@ -1,0 +1,11 @@
+Lazy LOADING'in fazladan bir select sorgusu çalıştırmak gibi bir programı var.
+Yani hieraşik sonucu almak için ilk önce bir Entity'nin tüm sonuçlarını almamız gerekir. Bunun için 1 select sorgusu kullanırız.
+Sonra Alınan her değer kadar ilişkili entity'e select sorgusu uygulanacak. (One to Many Entity ilişkisi için bu örnek)
+Yani ilk select Entity'deki değerleri bulmak için diğerleri bu değerlerle ilişkili değerleri bulmak için
+
+Bekli hangisi avantajlı? 
+Bu tamamen projenini gerekliğine bağlı. 2 yüklenme türününde kendine göre avantajları ve dezavantajları var.
+
+EAGER LOADING verileri tek bir sorguda aldığı için sonucu CACHE'leyebiliriz. Bu sonraki kullanımlar için prerformans kolaylığı sağlar. Fazla veri taşındığı için veri tabanına yolculuğunda hafızayı tüketiyoruz.
+
+Lazy Loading ile sadece ihtiyacımız olan veriyi tek bir sorgu ile alabiliriz. Fakat her ver kendi sorgusuyle geldiği için veri tabanı ile uygulama arasında çok fazla gidip geliyoruz. Buda performansı bitiriyor.

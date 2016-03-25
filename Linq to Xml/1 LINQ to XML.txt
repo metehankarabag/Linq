@@ -1,0 +1,11 @@
+Function Contruction: Tek açıklamada bir XML ağaçı oluşturma yeteneğidir.
+Bir XML dosyasının yapsında 
+Declaration, Comment, Element, Attribute bulunur.
+Yani <></> : Element belirtir.
+<XX xx=""> : xx Attribute belirtir.
+
+Bu XML nesneleri c# ile oluşturmaya yarayan CLASS'lar var. Adlarının başına X alır. Ve CLASS'lar System.Xml.Linq içindedir.
+XML dosyasının kendisini XDocument CLASS'ı kullanılır. 
+Oluşturulan dosyayı kaydemek için Save() methodu var. document nesnesine uyguluyoruz.
+
+Bir lementin hem Attribute'u hemde alt elemenleri olabilir.

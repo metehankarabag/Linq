@@ -1,0 +1,8 @@
+LINQ operatörleri çalışma davranışlarına göre 2 gruba ayrılırlar.
+1. DEFERRED/LAZY(Ertelenmiş) operatörler: Bu operatörler(Sql'e benzeyen kullanımları içinde aynı) ile oluşturulan sorgular, oluşturuldukları yerde çalışmaz sorgu sonucunun tamamen döndüğü yerde çalışırlar.(böyle yazmış ama kullanıldığı yerde çalışır diyebilirm herhalde.)
+örnekler - select where, Take,Skip, ...
+
+2. Immediate or Greedy Opreatörler: Bu operatörler sorgulara uygulandığında sorgu oluşturulduğu yerde hemen çalışır.
+
+- count,average,min,max,ToList, ...
+

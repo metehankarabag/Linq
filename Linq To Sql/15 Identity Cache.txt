@@ -1,0 +1,14 @@
+Linq sorguları ile Provider'ın SQL'de çalıştırdığı sorgu sonuçları ile programda geçerli CLASS'ın bir öeneğini oluşturur. Oluşan nesneye bir kimlik verilir ve önbelleğe alınır. Linq ile yapılan diğer bir sorgu, LINQ PROVIDER tarafından çevirilmeden önce cachede kontrol edilir aynı nesne varsa veritabanına gitmez ön bellekteki nesne döner.
+
+Her LINQ to SQL DATA CONTEXT CLASS'ın kendi IDENTITY CACHE'ı vardır.
+Yani veri tabanına bağlantı için kullandığımız CLASS örneği değişirse, kullanılan CACHE nesneside değişir. Bu durumda aynı LINQ sorgu sonuçlar farklı CACHE'lerde olur.
+Yani LINQ'ların uygulandığı DBCONTEXT CLASS örneği farklı ise aynı sonucu verseler bile farklı nesne olarak tutulurlar.
+
+Yani burda aynı nesne olabilmesi için 2 nokta var
+1. Bağlantıyı sağlayan DBCONTEXT CLASS nesnesinin aynı olması.
+2. LINQ'ların aynı sonucu vermesi.
+
+
+- a, b class nesnelerinde veri tabanından LINQ ile çekilmiş aynı veriler var.
+a daki nesne bilgilerini güncelleyip, b'ye tekrar aynı nesneyi oluşturacak bir LINQ method'u uyguladığımızda, a de yapılan değişiklik b de görünmez. Çünkü LINQ sorgusundaki değer aynı olduğu için LINQ SQL'e gitmez.
+DBCONTEXT CLASS'ının Refresh() methodunun 2 paramatreli overload'ını kullanarak bir nesneyi yenileyebilriz. Böylece cache silinir ve b nesnesi veri tabanında gibi güncel değerleri alır.

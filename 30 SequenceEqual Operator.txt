@@ -1,0 +1,6 @@
+Dizilerin birbirine eşit olup olmadığın kontrol eden operatördür.
+Eleman sayısı eşit, eleman değerleri ve sıraları aynı olmalıdır.
+Method da büyük-küçük harf duyarlılı var. Bunu engellemek için methodun 2. overloadına 2. parametre olarak StringComparer.OriginalIgnoreCase() ekliyoruz.
+
+Değerleri aynı sıralaması farklı olan diziler için OrderBy() kullanabiliriz.
+Referans türündeki listelerde DISTINCT() methodunun çözümleri buradada geçerlidir.

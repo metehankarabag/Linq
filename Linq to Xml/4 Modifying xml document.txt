@@ -1,0 +1,25 @@
+Geçen derste XML dosyasını sorgulamıştık bu derste düzenleyeceğiz.
+
+Bunun için bize ROO elementi veren. Element() methoduna Add() methodunu uygulamalıyız. Çünkü eklemeyi istediğimiz veri buraya ait. Yani nereye aitse oraya uygulayacağız.
+Nereye eklersek ekleyelim bir element nesnesi ekleyeceğimiz için metoda parametre olarak XElement CLASS'ının bir örneğini vermeliyiz.
+CLASS kurucusuna birinci parametre olarak her zamanki gibi element adı.
+2. parametresine varsa xATTRIBUTE'u, 3. parametre olarakde alt elementleri belirliyoruz.
+
+Not: Add methodu ile yapılan ekleme en alta eklenir. AddFirst() methodu ilk sıraya ekler.
+
+Eklenecek elementi özel bir yere eklecekse. 2 method kullanabiliriz.
+AddBeforeSelf() veya AddAfterSelf()
+
+Bunun için ilk önce eklenecek element'in hieraşıdekini yerini bulmalıyız. Bulduktan sonra hangi elementden önce veya sonra ekleneceğini belirlemek için where() uygulamalıyız. Elementten bir veya daha fazla olabilecekse FirstorDefault() gibi methodlarda ekleyebiliriz. Tüm bu sorgu işlemlerini gerçekleştirdikten sonra üstteki methodlardan birini kullanarak method içinde oluşturduğumuz Element nesnesini ekliyoruz.
+
+Not: XML'i webde paylaşacaksak, Xml'i kaydederken. Boşlukları silmek için Save() methoduna 2. parametre olarak SaveOptions CLASS'ının DisableFormatting PROPERTY'sini uyguluyoruz.
+
+Xml dosyasından bir Element'e ulaştığımızda Eleemnt'in alt elemenlerini SetElementValue() methodu ile değiştirebiliriz. 1. parametre olarak alt element adını 2. parmetre olarak değeri alır.
+SetElementValue() yerine Select() uygulayığ LAMBDA ile tüm alt elementleri temsil eden bir değişken oluşturabilir. Bu değişkene Elemen() methodu uygulayıp bir elementi alabiliriz. aynı elementden birden fazla olması durumu için ek methodları uyguladıktan sonra SetValue() methodu parametresine verdiğimiz değer ile değiştirebiliriz.
+
+XDocument nesne örneğinin Nodes() methoduna OfType<XComment> uygulayıp gene birden fazla olma durumuna karşı gerekli methodları uyguladıktan sonra Value PROPERTY'si ile bulunan elementin değerini değiştirebiliriz."Bunu Commen nesnesi için yapabiliyorsa Element nesnesi içinde yapabiliyor olmamız lazım. Nodes() tüm Elemanların genel adı yanlış hatırlamıyorsam."
+
+Xml'den bir elementi silmek için Xdocument nesnesine ilk önce Root Property'ini uygulamalıyız. Sonra hieraşideki tüm elementleri Remove() methodu ile silebiliriz. Bu method'dan önce filitrelemede yapıp belirli elemantlerin silinmesinide sağlayabiliriz.
+
+Xml COMMENT'leri silerken Nodes() methodunu kullanıyor. Nodes() kullanarak Element nesnelerini silemezmiyiz? Nodes()'un anlamı ne ?
+X kişisi böyle bir dil yapmayı nerden öğrendi?

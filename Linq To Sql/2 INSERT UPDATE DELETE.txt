@@ -1,0 +1,6 @@
+InsertOnSubmit(): methodu parametre olarak uygulandığı IEnumarablez<T>'den bir örnek alır ve bunu listeye ekler.
+Eklenen bu öğenin veri tabanında geçerli olması için Veri tabanı bağlantı CLASS'ına SubmitChanges() methodunu uygulamalıyız.
+
+Güncelleme için IEnumarablez<T>'e uygulanan SingleOrDefault() methodu kullanıyoruz. Bu methodun nasıl çalıştığı anlatılmıştı.
+
+Silme işlemi içinde DeleteOnSubmit() bir nesneyi siler.

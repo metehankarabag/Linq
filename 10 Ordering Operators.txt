@@ -1,0 +1,11 @@
+Orderby/Descending, thenby/Descending/Reverse
+
+OrderBy: IOrderedEnumerable<T> döner. Yani sadece uygulandığı Liste türü ve öğelerinin işleme girme sırasını değiştirir.
+Operatör IEnumerable<T>'de dönebilir. Çünkü IOrderedEnumerable<T> bu classdan türemiştir.
+
+11. ders
+OrderBy ve Descendig bir değer veya açıklama ile vbir koleksiyonu sıralamyaı istediğimzde çalışır. birden fazla değer veya açıklama ile sıralamayı istiyorsak OrderBy'ı ThenBy ile birlikte kullanmalıyız.
+OrderBy PRIMARY sıralama sağlar. ThenBy'lar ikini sıralamayı sağlar ve bir LINQ'da birden fazla kez kullanılabilir.
+
+LINQ'da LAMBDA kullanarak sıralama yapmayı istiyorsak ilk önce orderBy'ı kullandıktan sonra ThenBy diğer sıralamaları yapıyorız.
+LINQ'da SQL'e benzeyen sorgular kullanacaksak, orderby'dan sonra kaçtane farklı sütuna/Property göre sıralama yapacaksak virgül ile ayırıp yapabilriz. Ter sıralamalar için Descending anahtarı sütun/Property adlarından sonra yazılır.

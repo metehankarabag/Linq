@@ -1,0 +1,4 @@
+LINQ to SQL sayfasına SERVER EXPLORER'dan tablo ekler gibi veri tabanındaki STORED PROCEDURE'i ekleyebiliriz. Otomatik olarak otomatik oluşturulmuş CLASS'a bir method eklenir. Bu methoda CLASS örneğinden ulaşarak programda kullanabiliriz.
+
+Oluşturulan methodun dönüş türü ISingleResult<t> içindeki type'dır.  ISingleResult<t> tek bir sonuç SET'i döner. T otomatik oluşturulmuş method adını taşıyan bir türdür. Bunu düzeltebiliriz. -LINQ to SQL sayfasında methoda sağ tıkla ve otomaik belirlenen dönüş türünü değiştir.
+Dönüş türü için yeni bir tür kullanmasının nedeni STORED PROCEDURE'yi LINQ to SQL sayfasında boş alana atmamız. Bir Entity üzerinde atsaydık. Dönüş türü o ENTITY şeklinde olacaktı.

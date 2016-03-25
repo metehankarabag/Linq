@@ -1,0 +1,1 @@
+Entity'ler ile bir tabloyu böylerek 2 ye ayırdık. Böylece veri kaydı yaparken, hangi entity'i kullanacaksak sadece o entity'deki ve base Entity'deki Property'leri görüp doldurulabilir.

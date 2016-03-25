@@ -1,0 +1,12 @@
+INNERJOIN kullandığımızda, KEY'deki değerlerin karşılığı boşsa KEY'deki değerden ulaşılan veri sonuca eklenmez.
+Extensoion Method düzeninde - JOIN() methodu kullanılır.
+2 overloadı var. 1. 4 parametre alıyor 21. derstekiler ile aynı
+
+GroupJoin ile InnerJoin arasındaki farklar.
+
+GroupJoin hieraşik veri sonucu verir. Yani birden fazla veri, belirtilen KEY ile bir grupda toplanır ve KEY grubu temsil eder.
+Bu yüzden GrupJoin'den sonuç çıkarırken ilk önce Grupları çıkarmak zorundayız. Adım adım hieraşik düzende aşağı inebiliriz.
+KEY değerleri OUTERCLASS'dan alınır. Bu yüzden alınan her değer hiç elemanı olmasa bile hieraşiye eklenir. - Bu yüzden GROUPJOIN, SQL'de OUTERJOIN'e benzer.
+
+
+Join: Düz veri sonucu verir. Her KEY karışığındaki eleman ile eşleşir ve düz bir şekilde eklenir. Key'in karşılığı yoksa sonuca eklenmez. JOIN, SQL'de INNERJOIN'e benzer.

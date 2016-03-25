@@ -1,0 +1,5 @@
+Sayfalama işlemi yaptık.
+Bunun için bir değişkende her sayfanın kaç eleman alacağını belirledik(3) ve kullanıcıdan bir sayfa numarası girmesini istedik.
+
+Skip içinde; kullanıcının girdiği rakamdan bir çıkartıp belirlediğimiz sayı(3) ile çarptık. Kullanıcı 2. sayfayı görünlülemek için 2 girer.
+ikinci sayfa 4. elemandan başlar. Yani ilk üç eleman atlanmalıdır. Bu yüzden kullanıcının girdiği sayıdan 1. çıkarıp 3 ile çarptık. Artık elimizde 3. den sonraki tüm elemanlar var. Fakat biz 6 elemandan sonrasını görmeyi istemiyoruz. Bunun için Skip() den sonra .Take() kullanık ve parametre olarak sayfa genişliği olan 3'ü verdik. Böylece 6. elemandan sonrasından kurdulmuş olduk.

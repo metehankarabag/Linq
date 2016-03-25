@@ -1,0 +1,19 @@
+Bir XML dosyasını XML SCHEMA DEFINATION LANGUAGE kullanarak onaylama.
+XSD bir XML dosyasının yapısını belirler. Elemenlterin sıralamsı özellikleri falan.. Yani bir XML dosyası XSD ile ilişkilendirilmemişse istenilen türde element istenilen özelliklerle dosyaya eklenebilir.
+
+XSD'de benim dikkatimi çeken.
+Her element altında sırayla - <xsd:coplexType><xsd:sequence> elemenleri var. Bunlardan sonra varsa alt elemenler ekleniyor.
+
+XSD dosyasının programa DATA sekmesinden ekleyebiliriz. Açılan pencerede 2. seçenek kod kısmını gösterir.
+
+XmlSchemaSet CLASS'ının Add() methodunun 2 overload'ı var. 3. yi kullanıyor.
+1. parametre olarak XSD NAMESPACE'i alıyor.(Olmadığı için boş bıraktık.)
+2. parametre olarak XSD dosya yolunu alıyor.
+
+Xdocument CLASS'ı ile XML'i programa alıyoruz. Bu CLASS'ın validate() methoduna 
+1. parametre olarak XSD dosyasını verliyoruz.
+2. parametre olarak hata olursa çalışacak methodu istiyor. Yani delegate bekliyoz.
+Delegate 2 parametre beliyor. 1. object 2. eventargs
+2. parametre ile mesaj veriyoruz. 
+
+Validate() methodu her elementi ayrı ayrı kontrol eder ve hata olan her element için hata mesajını gösterir. Tabi methoda exception attırırsa ilk seferde program patlar.
